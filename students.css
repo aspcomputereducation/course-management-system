@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:20px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* Header */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.header h1{
+    color:#333;
+}
+
+.dashboard-btn{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.dashboard-btn:hover{
+    background:#0056b3;
+}
+
+/* Stats */
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:15px 25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stat-card h3{
+    color:#555;
+}
+
+.stat-card p{
+    font-size:28px;
+    font-weight:bold;
+    color:#007bff;
+}
+
+.search-box input{
+    width:300px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+/* Form */
+
+.form-box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-box h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.form-grid input,
+.form-grid select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+.form-grid input:focus,
+.form-grid select:focus{
+    border-color:#007bff;
+}
+
+.add-btn{
+    margin-top:20px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#28a745;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:#218838;
+}
+
+/* Table */
+
+.table-box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    overflow-x:auto;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#007bff;
+    color:white;
+    padding:12px;
+    font-size:14px;
+}
+
+table td{
+    padding:10px;
+    text-align:center;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+/* Buttons */
+
+.edit-btn{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.edit-btn:hover{
+    background:#e68900;
+}
+
+.delete-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:darkred;
+}
+
+/* Payment Status Colors */
+
+.paid{
+    color:green;
+    font-weight:bold;
+}
+
+.pending{
+    color:orange;
+    font-weight:bold;
+}
+
+.unpaid{
+    color:red;
+    font-weight:bold;
+}
+
+.part{
+    color:#007bff;
+    font-weight:bold;
+}
+
+.overdue{
+    color:#b00020;
+    font-weight:bold;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+    .form-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .search-box input{
+        width:100%;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}

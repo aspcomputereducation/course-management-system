@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASP Company Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>ASP Company</h2>
+
+        <ul>
+            <li onclick="showPage('dashboard')">🏠 Dashboard</li>
+            <li onclick="showPage('students')">🎓 Students</li>
+            <li onclick="showPage('courses')">📚 Courses</li>
+            <li onclick="showPage('employees')">👨‍💼 Employees</li>
+            <li onclick="showPage('reports')">📊 Reports</li>
+            <li onclick="showPage('settings')">⚙ Settings</li>
+            <li onclick="logout()">🚪 Logout</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <div id="dashboard" class="page active">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p>500</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Courses</h3>
+                    <p>25</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Employees</h3>
+                    <p>40</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Revenue</h3>
+                    <p>₹5,50,000</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="students" class="page">
+            <h1>Students</h1>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Arun</td>
+                    <td>Java</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Priya</td>
+                    <td>Python</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="courses" class="page">
+            <h1>Courses</h1>
+
+            <ul>
+                <li>Java Full Stack</li>
+                <li>Python Programming</li>
+                <li>Web Development</li>
+                <li>Data Science</li>
+            </ul>
+        </div>
+
+        <div id="employees" class="page">
+            <h1>Employees</h1>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Kumar</td>
+                    <td>Trainer</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Ravi</td>
+                    <td>Manager</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="reports" class="page">
+            <h1>Reports</h1>
+            <p>Monthly Revenue Report</p>
+            <p>Student Admission Report</p>
+            <p>Course Completion Report</p>
+        </div>
+
+        <div id="settings" class="page">
+            <h1>Settings</h1>
+
+            <label>Company Name</label>
+            <input type="text" value="ASP Company">
+
+            <br><br>
+
+            <button>Save Settings</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

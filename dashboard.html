@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASP Company Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>ASP Company</h2>
+
+        <ul>
+            <li onclick="showPage('dashboard')">🏠 Dashboard</li>
+            <li onclick="window.location.href='students.html'">
+    🎓 Students
+</li>
+<li>
+    <a href="course.html">
+        📚 Courses
+    </a>
+</li>
+<li>
+    <a href="employees.html">
+        👨‍💼 Employees
+    </a>
+</li>
+    <li>
+    <a href="reports.html">
+        📊 Reports
+    </a>
+</li>
+</li>
+    <li>
+    <a href="settings.html">
+        ⚙ Settings
+    </a>
+</li>
+            
+            <li onclick="logout()">🚪 Logout</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="navbar">
+            <h1>Company Dashboard</h1>
+            <div class="user">
+                Welcome Admin
+            </div>
+        </div>
+
+        <!-- Cards -->
+       <div class="cards">
+
+    <div class="card student-card">
+        <h3>Total Students</h3>
+        <p id="studentCount">500</p>
+    </div>
+
+    <div class="card course-card">
+        <h3>Total Courses</h3>
+        <p id="courses">25</p>
+    </div>
+
+    <div class="card employee-card">
+        <h3>Total Employees</h3>
+        <p id="employees">40</p>
+    </div>
+
+    <div class="card revenue-card">
+        <h3>Revenue</h3>
+        <p>₹5,50,000</p>
+    </div>
+
+</div>
+        <!-- Table -->
+        <div class="table-section">
+            <h2>Recent Students</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Arun</td>
+                    <td>Java</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Kumar</td>
+                    <td>Python</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>Priya</td>
+                    <td>Web Development</td>
+                    <td>Active</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+<div id="dashboard" class="page active">
+    Dashboard Content
+</div>
+
+<div id="students" class="page">
+    Students Content
+</div>
+
+<div id="courses" class="page">
+    Courses Content
+</div>
+
+<div id="employees" class="page">
+    Employees Content
+</div>
+
+<div id="reports" class="page">
+    Reports Content
+</div>
+
+<div id="settings" class="page">
+    Settings Content
+</div>
+<div class="sidebar">
+
+    <h2>SMS</h2>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="students.html">
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a href="products.html">
+                Products
+            </a>
+        </li>
+
+        <li>
+            <a href="#" onclick="logout()">
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+<button onclick="window.location.href='students.html'">
+    Open Students Page
+</button>
+<button onclick="openStudents()">
+    Students
+</button>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

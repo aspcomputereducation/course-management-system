@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+    );
+}
+
+.login-box{
+
+    width:400px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.3);
+
+    text-align:center;
+
+    color:white;
+}
+
+.login-box h1{
+    margin-bottom:10px;
+}
+
+.login-box p{
+    margin-bottom:25px;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:15px;
+    color:#555;
+}
+
+.input-box input{
+
+    width:100%;
+    padding:14px 45px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+}
+
+#togglePassword{
+    position:absolute;
+    right:15px;
+    top:15px;
+    cursor:pointer;
+    color:#555;
+}
+
+.options{
+
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+}
+
+.options a{
+    color:white;
+    text-decoration:none;
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#00ff95;
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.register-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.register-link p{
+    color:#fff;
+    font-size:14px;
+}
+
+.register-link a{
+    color:#1130df;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+}
+#message{
+    margin-top:15px;
+    font-weight:bold;
+}

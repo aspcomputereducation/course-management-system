@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="employees.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>👨‍💼 Employee Management</h1>
+     <!-- Header -->
+
+    <div class="header">
+
+        <h1>📊 Reports Dashboard</h1>
+
+        <button
+        class="dashboard-btn"
+        onclick="goDashboard()">
+
+            ← Back to Dashboard
+
+        </button>
+
+    <div class="form-box">
+
+        <input
+        type="text"
+        id="empName"
+        placeholder="Employee Name">
+
+        <input
+        type="text"
+        id="empPosition"
+        placeholder="Position">
+
+        <input
+        type="number"
+        id="empSalary"
+        placeholder="Salary">
+
+        <button id="saveBtn" onclick="saveEmployee()">
+            Add Employee
+        </button>
+
+    </div>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody id="employeeTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="employees.js"></script>
+
+</body>
+</html>

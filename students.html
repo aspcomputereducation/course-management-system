@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASP Student Management System</title>
+
+<link rel="stylesheet" href="students.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🎓 ASP Student Management System</h1>
+
+        <button class="dashboard-btn"
+        onclick="goDashboard()">
+            ← Back to Dashboard
+        </button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+        </div>
+
+        <div class="search-box">
+            <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search Student..."
+            onkeyup="searchStudent()">
+        </div>
+
+    </div>
+
+    <!-- Student Form -->
+    <div class="form-box">
+
+        <h2>Add / Update Student</h2>
+
+        <div class="form-grid">
+
+            <input
+            type="number"
+            id="studentId"
+            placeholder="Student ID">
+
+            <input
+            type="text"
+            id="name"
+            placeholder="Student Name">
+
+            <input
+            type="text"
+            id="course"
+            placeholder="Course">
+
+            <input
+            type="number"
+            id="age"
+            placeholder="Age">
+
+            <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number">
+
+            <input
+            type="email"
+            id="email"
+            placeholder="Email Address">
+
+            <select id="gender">
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option>
+                    Male
+                </option>
+
+                <option>
+                    Female
+                </option>
+
+                <option>
+                    Other
+                </option>
+            </select>
+
+            <!-- Fees Details -->
+
+            <input
+            type="number"
+            id="fees"
+            placeholder="Total Fees"
+            oninput="calculateBalance()">
+
+            <input
+            type="number"
+            id="paidAmount"
+            placeholder="Paid Amount"
+            oninput="calculateBalance()">
+
+            <input
+            type="number"
+            id="balance"
+            placeholder="Balance Fees"
+            readonly>
+
+            <select id="status">
+
+                <option value="">
+                    Payment Status
+                </option>
+
+                <option>
+                    Paid
+                </option>
+
+                <option>
+                    Part Payment
+                </option>
+
+                <option>
+                    Pending
+                </option>
+
+                <option>
+                    Unpaid
+                </option>
+
+                <option>
+                    Overdue
+                </option>
+
+            </select>
+
+            <input
+            type="date"
+            id="dueDate">
+
+            <input
+            type="text"
+            id="receiptNo"
+            placeholder="Receipt Number">
+
+            <select id="paymentMode">
+
+                <option value="">
+                    Payment Mode
+                </option>
+
+                <option>
+                    Cash
+                </option>
+
+                <option>
+                    UPI
+                </option>
+
+                <option>
+                    Bank Transfer
+                </option>
+
+                <option>
+                    Card
+                </option>
+
+            </select>
+
+        </div>
+
+        <button
+        id="studentBtn"
+        class="add-btn"
+        onclick="addStudent()">
+            Add Student
+        </button>
+
+    </div>
+
+    <!-- Students Table -->
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+
+                    <th>Total Fees</th>
+                    <th>Paid</th>
+                    <th>Balance</th>
+
+                    <th>Status</th>
+                    <th>Due Date</th>
+                    <th>Receipt No</th>
+                    <th>Payment Mode</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="students.js"></script>
+
+</body>
+</html>

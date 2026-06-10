@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Reports Management</title>
+
+    <link rel="stylesheet" href="reports.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1>📊 Reports Dashboard</h1>
+
+        <button
+        class="dashboard-btn"
+        onclick="goDashboard()">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </div>
+
+    <!-- Summary Cards -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h3>Total Courses</h3>
+
+            <p id="totalCourses">0</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Total Students</h3>
+
+            <p id="totalStudents">0</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Total Trainers</h3>
+
+            <p id="totalTrainers">0</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Total Revenue</h3>
+
+            <p id="totalRevenue">₹0</p>
+
+        </div>
+
+    </div>
+
+    <!-- Report Filters -->
+
+    <div class="report-box">
+
+        <h2>Generate Reports</h2>
+
+        <div class="filter-grid">
+
+            <select id="reportType">
+
+                <option value="">
+                    Select Report Type
+                </option>
+
+                <option>
+                    Course Report
+                </option>
+
+                <option>
+                    Student Report
+                </option>
+
+                <option>
+                    Trainer Report
+                </option>
+
+                <option>
+                    Revenue Report
+                </option>
+
+            </select>
+
+            <input
+            type="date"
+            id="fromDate">
+
+            <input
+            type="date"
+            id="toDate">
+
+        </div>
+
+        <button
+        class="generate-btn"
+        onclick="generateReport()">
+
+            Generate Report
+
+        </button>
+
+    </div>
+
+    <!-- Report Table -->
+
+    <div class="table-box">
+
+        <h2>Report Results</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Category</th>
+
+                    <th>Date</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="reportTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="reports.js"></script>
+
+</body>
+</html>

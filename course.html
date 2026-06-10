@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Course Management System</title>
+
+    <link rel="stylesheet" href="course.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1>📚 Course Management System</h1>
+
+        <button
+        class="dashboard-btn"
+        onclick="goDashboard()">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </div>
+
+    <!-- Statistics Section -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h3>Total Courses</h3>
+
+            <p id="totalCourses">0</p>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search Course..."
+            onkeyup="searchCourse()">
+
+        </div>
+
+    </div>
+
+    <!-- Course Form -->
+
+    <div class="form-box">
+
+        <h2>Add / Update Course</h2>
+
+        <div class="form-grid">
+
+            <input
+            type="text"
+            id="courseCode"
+            placeholder="Course Code">
+
+            <input
+            type="text"
+            id="courseName"
+            placeholder="Course Name">
+
+            <input
+            type="text"
+            id="category"
+            placeholder="Category">
+
+            <select id="duration">
+
+                <option value="">
+                    Select Duration
+                </option>
+
+                <option>
+                    1 Month
+                </option>
+
+                <option>
+                    3 Months
+                </option>
+
+                <option>
+                    6 Months
+                </option>
+
+                <option>
+                    1 Year
+                </option>
+
+            </select>
+
+            <input
+            type="number"
+            id="fees"
+            placeholder="Course Fees">
+
+            <input
+            type="text"
+            id="trainer"
+            placeholder="Trainer Name">
+
+            <input
+            type="number"
+            id="seats"
+            placeholder="Available Seats">
+
+            <input
+            type="date"
+            id="startDate">
+
+            <select id="status">
+
+                <option value="">
+                    Course Status
+                </option>
+
+                <option>
+                    Active
+                </option>
+
+                <option>
+                    Closed
+                </option>
+
+            </select>
+
+            <textarea
+            id="description"
+            placeholder="Course Description">
+            </textarea>
+
+        </div>
+
+        <button
+        id="courseBtn"
+        class="add-btn"
+        onclick="addCourse()">
+
+            Add Course
+
+        </button>
+
+    </div>
+
+    <!-- Course Table -->
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Course Code</th>
+
+                    <th>Course Name</th>
+
+                    <th>Category</th>
+
+                    <th>Duration</th>
+
+                    <th>Fees</th>
+
+                    <th>Trainer</th>
+
+                    <th>Seats</th>
+
+                    <th>Start Date</th>
+
+                    <th>Status</th>
+
+                    <th>Description</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="courseTable">
+
+                <!-- Dynamic Data -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="course.js"></script>
+
+</body>
+</html>
